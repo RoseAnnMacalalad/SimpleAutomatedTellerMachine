@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <link rel="stylesheet" type="text/css" href="atm.css">
+	<title>Automated Teller Machine</title>
+<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+ <body ng-app = "angular">
+ <div class="DivMain">
+	<h2 id="headStyle"> <i>Welcome to Angular Bank</i> </h2>
+	<br> 
+
+	<div ng-controller="Name">
+		<p align="center" id="style2">Please Enter your Pin: <input id = "style2"type="text">
+		<button type="submit" ng-click="onClickmainForm()" ng-show="!showmainForm" class="btn btn-success"> Next </button> </p>     
+      	<form ng-show="showmainForm">
+        	<p align="center" id = "style2">Account Name: <b>{{ first }} {{ last }}</b></p>
+        	<h3 align="center" id = "style2"> Please choose the following options</h3>
+		</form> 
+		</div>
+
+	<div class="Divbal">
+			<div ng-controller = "balance" >
+				
+				<button type="button" ng-click="onClickbalForm()" ng-show="!bal" class="btn btn-success"> Show Balance  </button>      
+     				<form ng-show="bal">
+         				<h5 id = style1 > Your Balance is</h5>
+         				<h5 id = style1 ><u>{{bals}}</u>  </h5>
+      			</form> 
+      			
+			</div>  
+		</div>
+
+	<div class="Divdep">
+
+			<div ng-controller = "withdraw" >
+      			<button type="submit" ng-click="onClickdrawForm()" ng-show="!draw" class="btn btn-success"> Withdraw Amount </button>        
+      				<form ng-show="draw">
+         				<p id="style2"> Please enter the Amount to withdraw: <br>  <input id = "style2"type="text" ng-model="num1"> </p>
+         				
+      				</form> 
+      				<button type="button" ng-click="drawsForm()"  ng-click="subtract(num1,bal)" ng-show="!drawsss" class="btn btn-success"> Withdraw  </button>      
+     					<form ng-show="drawsss">
+         				<h5 id = style2 > You have successfully withdraw {{ num1 }} </h5>
+         				<h5 id = style2 > Now your new balance is:  </h5>
+         				<h5 id = style2 ><u> {{12000 - num1 }} </u> </h5>
+      					</form> 
+			</div>
+	</div>
+
+	<div class="Divwith" >
+			<div ng-controller = "deposits" >
+				<button type="submit" ng-click="onClickdepForm()" ng-show="!deposit" class="btn btn-success"> Deposit Amount </button>        
+     				<form ng-show="deposit">
+         				<p id="style2"> Please enter the Amount to Deposit: <br>  <input id = "style2"type="text" ng-model="num1"> </p>
+      				</form> 
+      			<button type="button" ng-click="depForm()"  ng-click="add(num1,bal)" ng-show="!depsss" class="btn btn-success"> Deposit  </button>      
+     					<form ng-show="depsss">
+         				<h5 id = style2 > You have successfully deposit {{ num1 }} </h5>
+         				<h5 id = style2 > Now your new balance is:  </h5>
+         				<h5 id = style2 ><u> {{bal ++ num1 }} </u> </h5>
+      					</form> 
+			</div>
+	</div>
+      
+			
+
+			
+</div>
+      	
+	<script src="js/app.js"></script>
+	<script src="js/MainController/mainController.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+.DivMain {
+  margin: auto;
+  border: 2px outset black;
+  padding: 2px;
+  height: 1100px;
+  width: 1330px;
+  background-color: #ffdab9;
+}
+
+.Divbal{
+  position: absolute;
+  left: 15px;
+  border: 3px outset black;
+  width: 400px;
+  height: 750px;
+  padding: 2px;
+  background-color: #eecbad;
+ }
+
+ .Divdep{
+  position: absolute;
+  left: 476px;
+  border: 3px outset black;
+  width: 400px;
+  height: 750px;
+  padding: 2px;
+  background-color: #eecbad;
+ }
+
+ .Divwith{
+  position: absolute;
+  right: 15px;
+  border: 3px outset black;
+  width: 400px;
+  height: 750px;
+  padding: 2px;
+  background-color: #eecbad;
+ }
+
+  .btn{
+  padding: 14px 20px;
+  background-color: #b94e5e;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 750;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+#style1{
+      font-size: 50px;
+      font-family: serif;
+      color: #000;
+      text-align: center;
+    }
+#style2{
+      font-size: 30px;
+      font-family: serif;
+      color: #000;
+      text-align: center;
+    }
+
+ #headStyle{
+      font-size: 35px;
+      font-family: serif;
+      color: #000;
+      text-align: center;
+    }
